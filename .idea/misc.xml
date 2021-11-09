@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/drawable/button_gamelevels.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/drawable/button_stroke_black95_press_white.xml" value="0.378125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/drawable/style_btn_black60.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/drawable/style_btn_black95.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/drawable/style_btn_stroke_black95.xml" value="0.378125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/drawable/style_btn_stroke_black95_press_white.xml" value="0.378125" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_main.xml" value="0.1590909090909091" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Quiz/app/src/main/res/layout/gamelevels.xml" value="0.20052083333333334" />
       </map>
     </option>
   </component>
