@@ -15,6 +15,11 @@ public class Level1 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
+        //Код, который скругляет углы
+        img_left.setClipToOutline(true);
+
+        final ImageView img_right = (ImageView)findViewById(R.id.img_right);
+        //Код, который скругляет углы
         img_left.setClipToOutline(true);
 
         //Развернуть игру на весь экран начало
