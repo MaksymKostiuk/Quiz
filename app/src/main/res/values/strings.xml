@@ -4,5 +4,6 @@
     <string name="back">Назад</string>
     <string name="toast_on_back_pressed">Нажмите еще раз, чтобы выйти</string>
     <string name="level">Уровень:</string>
+    <string name="level1">Уровень 1</string>
     <string name="textcontinue">Продолжить</string>
 </resources>
