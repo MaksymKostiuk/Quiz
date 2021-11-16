@@ -7,16 +7,29 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.Random;
+
 public class Level1 extends AppCompatActivity {
 
     Dialog dialog;
+
+    public int numLeft;
+    public int numRight;
+    Array array = new Array();
+    Random random = new Random();//Для генерации случайных чисел
+    public int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +47,10 @@ public class Level1 extends AppCompatActivity {
         final ImageView img_right = (ImageView)findViewById(R.id.img_right);
         //Код, который скругляет углы
         img_left.setClipToOutline(true);
+
+        //Путь к левой и правой TextView
+        final TextView text_left = findViewById(R.id.text_left);
+        final TextView text_right = findViewById(R.id.text_right);
 
         //Развернуть игру на весь экран начало
         Window w = getWindow();
@@ -99,7 +116,52 @@ public class Level1 extends AppCompatActivity {
             }
         });
        //Кнопка назад конец
+
+        //Подключаем анимацию - начало
+        final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
+        //Подключаем анимацию - конец
+
+
+        numLeft = random.nextInt(10); //Генерируем число до 10
+        img_left.setImageResource(array.images1[numLeft]); // Достаем из массива картинку
+        text_left.setText(array.texts1[numLeft]);//Достаем из массива текст
+
+        numRight = random.nextInt(10);
+
+        //Цикл для проверки на равенство - начало
+        while (numLeft == numRight){
+            numRight = random.nextInt(10);
+        }
+        //Цикл для проверки на равенство - конец
+        img_right.setImageResource(array.images1[numRight]);//Достаем из массива картинку
+        text_right.setText(array.texts1[numRight]);//Достаем из массива текст
+
+        //Обрабатываем нажатие на левую картинку - начало
+        img_left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                //Условие касания картинки - начало
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    //Если коснулся картинки - начало
+                    img_right.setEnabled(false); // Блокируем правую картинку
+                    if(numLeft>numRight){
+                        img_left.setImageResource(R.drawable.img_true);
+                    }else{
+                        img_left.setImageResource(R.drawable.img_false);
+                    }
+                    //Если коснулся картинки - конец
+
+                }else if (event.getAction() == MotionEvent.ACTION_UP){
+                    //Если отпустил палец - начало
+
+                }
+                //Условие касания картинки - конец
+                return true;
+            }
+        });
+        //Обрабатываем нажатие на левую картинку - конец
     }
+
     //Системная кнопка Назад начало
     @Override
     public void onBackPressed() {
