@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="levelone">Выбери цифру, которая больше.\nВопросы могут повторяться пока вы не наберете 20 очков</string>
+    <string name="leveloneEnd">"Поздравляем, уровень пройден/n"
+    А знаете ли вы, что число 7 считается самым счастливым числом</string>
 </resources>
