@@ -39,7 +39,8 @@ public class Level3 extends AppCompatActivity {
 
         //Создаем переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level1);
+        text_levels.setText(R.string.level3);
+        //text_levels.setTextColor((R.color.black95));
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
         //Код, который скругляет углы
@@ -51,7 +52,10 @@ public class Level3 extends AppCompatActivity {
 
         //Путь к левой и правой TextView
         final TextView text_left = findViewById(R.id.text_left);
+        //text_left.setTextColor(R.color.black95);
+        //Путь к правой и правой TextView
         final TextView text_right = findViewById(R.id.text_right);
+        //text_right.setTextColor(R.color.black95);
 
         //Развернуть игру на весь экран начало
         Window w = getWindow();
@@ -175,6 +179,8 @@ public class Level3 extends AppCompatActivity {
 
         //Кнопка назад начало
         Button btn_back = (Button) findViewById(R.id.button_back);
+        //btn_back.setBackgroundResource(R.drawable.button_stroke_black95_press_white);
+        //btn_back.setTextColor(R.color.black95);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
