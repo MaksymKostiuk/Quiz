@@ -26,24 +26,22 @@
 
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="90"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
                 <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:id="@+id/textdescriptionend"
-                android:text="@string/leveloneEnd"
+                android:id="@+id/textDescriptionEnd"
+                android:text="@string/levelOneEnd"
                 android:textColor="@color/black95"
                 android:textSize="24sp" />
         </ScrollView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="40dp"
             android:id="@+id/btncontinue"
             android:background="@drawable/button_stroke_black95_press_white"
-            android:layout_weight="10"
             android:text="@string/textcontinue"
             android:textColor="@color/black95"
             android:paddingLeft="10dp"
