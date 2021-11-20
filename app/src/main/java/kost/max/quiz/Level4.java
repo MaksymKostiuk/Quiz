@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level4 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -76,18 +75,18 @@ public class Level3 extends AppCompatActivity {
 
         //Устанавливаем картинку в диалоговое окно - начало
         ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
-        previewimg.setImageResource(R.drawable.previewimg3);
+        previewimg.setImageResource(R.drawable.previewimg4);
         //Устанавливаем картинку в диалоговое окно - конец
-
-        //Устанавливаем описание задания - начало
-        TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
-        textdescription.setText(R.string.levelthree);
-        //Устанавливаем описание задания - конец
 
         //Устанавливаем фон диалогового окна - начало
         LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
-        dialogfon.setBackgroundResource(R.drawable.previewbackground3);
+        dialogfon.setBackgroundResource(R.drawable.previewbackground4);
         //Устанавливаем фон диалогового окна - конец
+
+        //Устанавливаем описание задания - начало
+        TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
+        textdescription.setText(R.string.levelfour);
+        //Устанавливаем описание задания - конец
 
         //Кнопка которая закрывает диалоговое окно начало
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
@@ -97,7 +96,7 @@ public class Level3 extends AppCompatActivity {
                 //Обрабатываем нажатие кнопки начало
                 try{
                     //Вернуться назад к выбору уровня начало
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);//Старт
                     finish();
                     //Вернуться назад к выбору уровня конец
@@ -150,7 +149,7 @@ public class Level3 extends AppCompatActivity {
                 //Обрабатываем нажатие кнопки начало
                 try{
                     //Вернуться назад к выбору уровня начало
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);//Старт
                     finish();
                     //Вернуться назад к выбору уровня конец
@@ -169,7 +168,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent (Level3.this, Level4.class);
+                    Intent intent = new Intent (Level4.this, Level4.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -192,7 +191,7 @@ public class Level3 extends AppCompatActivity {
                 //Обрабатываем нажатие кнопки Назад начало
                 try{
                     //Вернуться к выбору 1-го уровня начало
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                     //Вернуться к выбору 1-го уровня конец
@@ -213,7 +212,7 @@ public class Level3 extends AppCompatActivity {
         //Массив для прогресса игры - конец
 
         //Подключаем анимацию - начало
-        final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
         //Подключаем анимацию - конец
 
 
@@ -415,7 +414,7 @@ public class Level3 extends AppCompatActivity {
         //Обрабатываем нажатие кнопки Назад начало
         try{
             //Вернуться к выбору 1-го уровня начало
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);
             finish();
             //Вернуться к выбору 1-го уровня конец
