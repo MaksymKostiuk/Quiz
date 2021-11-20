@@ -13,15 +13,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
-
 import java.util.Random;
 
-public class Level2 extends AppCompatActivity {
+public class Level3 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -67,13 +66,18 @@ public class Level2 extends AppCompatActivity {
 
         //Устанавливаем картинку в диалоговое окно - начало
         ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
-        previewimg.setImageResource(R.drawable.previewimgtwo);
+        previewimg.setImageResource(R.drawable.previewimg3);
         //Устанавливаем картинку в диалоговое окно - конец
 
         //Устанавливаем описание задания - начало
         TextView textdescription = (TextView)dialog.findViewById(R.id.textdescription);
-        textdescription.setText(R.string.leveltwo);
+        textdescription.setText(R.string.levelthree);
         //Устанавливаем описание задания - конец
+
+        //Устанавливаем фон диалогового окна - начало
+        LinearLayout dialogfon = (LinearLayout)dialog.findViewById(R.id.dialogfon);
+        dialogfon.setBackgroundResource(R.drawable.previewbackground3);
+        //Устанавливаем фон диалогового окна - конец
 
         //Кнопка которая закрывает диалоговое окно начало
         TextView btnclose = (TextView)dialog.findViewById(R.id.btnclose);
@@ -83,7 +87,7 @@ public class Level2 extends AppCompatActivity {
                 //Обрабатываем нажатие кнопки начало
                 try{
                     //Вернуться назад к выбору уровня начало
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level3.this, GameLevels.class);
                     startActivity(intent);//Старт
                     finish();
                     //Вернуться назад к выбору уровня конец
@@ -131,7 +135,7 @@ public class Level2 extends AppCompatActivity {
                 //Обрабатываем нажатие кнопки начало
                 try{
                     //Вернуться назад к выбору уровня начало
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level3.this, GameLevels.class);
                     startActivity(intent);//Старт
                     finish();
                     //Вернуться назад к выбору уровня конец
@@ -150,7 +154,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent (Level2.this, Level3.class);
+                    Intent intent = new Intent (Level3.this, Level3.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -171,7 +175,7 @@ public class Level2 extends AppCompatActivity {
                 //Обрабатываем нажатие кнопки Назад начало
                 try{
                     //Вернуться к выбору 1-го уровня начало
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level3.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                     //Вернуться к выбору 1-го уровня конец
@@ -192,7 +196,7 @@ public class Level2 extends AppCompatActivity {
         //Массив для прогресса игры - конец
 
         //Подключаем анимацию - начало
-        final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
         //Подключаем анимацию - конец
 
 
@@ -394,7 +398,7 @@ public class Level2 extends AppCompatActivity {
         //Обрабатываем нажатие кнопки Назад начало
         try{
             //Вернуться к выбору 1-го уровня начало
-            Intent intent = new Intent(Level2.this, GameLevels.class);
+            Intent intent = new Intent(Level3.this, GameLevels.class);
             startActivity(intent);
             finish();
             //Вернуться к выбору 1-го уровня конец
