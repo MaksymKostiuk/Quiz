@@ -31,6 +31,7 @@ public class Level4 extends AppCompatActivity {
     Random random = new Random();//Для генерации случайных чисел
     public int count = 0;
 
+    //@SupressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class Level4 extends AppCompatActivity {
 
         //Создаем переменную text_levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level3);
+        text_levels.setText(R.string.level4);
         //text_levels.setTextColor((R.color.black95));
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
@@ -61,10 +62,10 @@ public class Level4 extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         //Развернуть игру на весь экран
 
-        //Устанавливаем фон диалогового окна - начало
+        //Устанавливаем фон - начало
         ImageView background = (ImageView)findViewById(R.id.background);
-        background.setImageResource(R.drawable.level3);
-        //Устанавливаем фон диалогового окна - конец
+        background.setImageResource(R.drawable.level4);
+        //Устанавливаем фон - конец
 
         //Вызов диалогового окна в начале игры
         dialog = new Dialog(this); //Создаем новое диалоговое окно
@@ -133,12 +134,12 @@ public class Level4 extends AppCompatActivity {
 
         //Устанавливаем фон диалогового окна - начало
         LinearLayout dialogfonEnd = (LinearLayout)dialogEnd.findViewById(R.id.dialogfon);
-        dialogfonEnd.setBackgroundResource(R.drawable.previewbackground3);
+        dialogfonEnd.setBackgroundResource(R.drawable.previewbackground4);
         //Устанавливаем фон диалогового окна - конец
 
         //Интересный факт - начало
         TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textDescriptionEnd);
-        textdescriptionEnd.setText(R.string.levelthreeEnd);
+        textdescriptionEnd.setText(R.string.levelfourEnd);
         //Интересный факт - конец
 
         //Кнопка которая закрывает диалоговое окно начало
@@ -168,7 +169,7 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent (Level4.this, Level4.class);
+                    Intent intent = new Intent (Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -216,19 +217,19 @@ public class Level4 extends AppCompatActivity {
         //Подключаем анимацию - конец
 
 
-        numLeft = random.nextInt(21); //Генерируем число до 21
-        img_left.setImageResource(array.images3[numLeft]); // Достаем из массива картинку
-        text_left.setText(array.texts3[numLeft]);//Достаем из массива текст
+        numLeft = random.nextInt(20); //Генерируем число до 21
+        img_left.setImageResource(array.images4[numLeft]); // Достаем из массива картинку
+        text_left.setText(array.texts4[numLeft]);//Достаем из массива текст
 
-        numRight = random.nextInt(21);
+        numRight = random.nextInt(20);
 
         //Цикл для проверки на равенство - начало
-        while (numLeft == numRight){
-            numRight = random.nextInt(21);
+        while (array.strong[numLeft]==array.strong[numRight]){
+            numRight = random.nextInt(20);
         }
         //Цикл для проверки на равенство - конец
-        img_right.setImageResource(array.images3[numRight]);//Достаем из массива картинку
-        text_right.setText(array.texts3[numRight]);//Достаем из массива текст
+        img_right.setImageResource(array.images4[numRight]);//Достаем из массива картинку
+        text_right.setText(array.texts4[numRight]);//Достаем из массива текст
 
         //Обрабатываем нажатие на левую картинку - начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -238,7 +239,7 @@ public class Level4 extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     //Если коснулся картинки - начало
                     img_right.setEnabled(false); // Блокируем правую картинку
-                    if(numLeft>numRight){
+                    if(array.strong[numLeft]>array.strong[numRight]){
                         img_left.setImageResource(R.drawable.img_true);
                     }else{
                         img_left.setImageResource(R.drawable.img_false);
@@ -247,7 +248,7 @@ public class Level4 extends AppCompatActivity {
 
                 }else if (event.getAction() == MotionEvent.ACTION_UP){
                     //Если отпустил палец - начало
-                    if (numLeft > numRight) {
+                    if (array.strong[numLeft]>array.strong[numRight]) {
                         if(count<20){
                             count = count + 1;
                         }
@@ -293,21 +294,19 @@ public class Level4 extends AppCompatActivity {
                         //Выход из уровня
                         dialogEnd.show();
                     }else{
-                        numLeft = random.nextInt(21); //Генерируем число
-                        img_left.setImageResource(array.images3[numLeft]); // Достаем из массива картинку
-                        img_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);//Достаем из массива текст
+                        numLeft = random.nextInt(20); //Генерируем число до 21
+                        img_left.setImageResource(array.images4[numLeft]); // Достаем из массива картинку
+                        text_left.setText(array.texts4[numLeft]);//Достаем из массива текст
 
-                        numRight = random.nextInt(21);
+                        numRight = random.nextInt(20);
 
                         //Цикл для проверки на равенство - начало
-                        while (numLeft == numRight){
-                            numRight = random.nextInt(21);
+                        while (array.strong[numLeft]==array.strong[numRight]){
+                            numRight = random.nextInt(20);
                         }
                         //Цикл для проверки на равенство - конец
-                        img_right.setImageResource(array.images3[numRight]);//Достаем из массива картинку
-                        img_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]);//Достаем из массива текст
+                        img_right.setImageResource(array.images4[numRight]);//Достаем из массива картинку
+                        text_right.setText(array.texts4[numRight]);//Достаем из массива текст
 
                         img_right.setEnabled(true);//Включаем обратно правую картинку
                     }
@@ -326,7 +325,7 @@ public class Level4 extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     //Если коснулся картинки - начало
                     img_left.setEnabled(false); // Блокируем правую картинку
-                    if(numLeft<numRight){
+                    if(array.strong[numLeft]<array.strong[numRight]){
                         img_right.setImageResource(R.drawable.img_true);
                     }else{
                         img_right.setImageResource(R.drawable.img_false);
@@ -335,7 +334,7 @@ public class Level4 extends AppCompatActivity {
 
                 }else if (event.getAction() == MotionEvent.ACTION_UP){
                     //Если отпустил палец - начало
-                    if (numLeft < numRight) {
+                    if (array.strong[numLeft] < array.strong[numRight]) {
                         //Если правая картинка больше
                         if(count<20){
                             count = count + 1;
@@ -382,21 +381,19 @@ public class Level4 extends AppCompatActivity {
                         //Выход из уровня
                         dialogEnd.show();
                     }else{
-                        numLeft = random.nextInt(21); //Генерируем число до 10
-                        img_left.setImageResource(array.images3[numLeft]); // Достаем из массива картинку
-                        img_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);//Достаем из массива текст
+                        numLeft = random.nextInt(20); //Генерируем число до 21
+                        img_left.setImageResource(array.images4[numLeft]); // Достаем из массива картинку
+                        text_left.setText(array.texts4[numLeft]);//Достаем из массива текст
 
-                        numRight = random.nextInt(21);
+                        numRight = random.nextInt(20);
 
                         //Цикл для проверки на равенство - начало
-                        while (numLeft == numRight){
-                            numRight = random.nextInt(21);
+                        while (array.strong[numLeft]==array.strong[numRight]){
+                            numRight = random.nextInt(20);
                         }
                         //Цикл для проверки на равенство - конец
-                        img_right.setImageResource(array.images3[numRight]);//Достаем из массива картинку
-                        img_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]);//Достаем из массива текст
+                        img_right.setImageResource(array.images4[numRight]);//Достаем из массива картинку
+                        text_right.setText(array.texts4[numRight]);//Достаем из массива текст
 
                         img_left.setEnabled(true);//Включаем обратно левую картинку
                     }

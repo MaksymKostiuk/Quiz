@@ -43,4 +43,25 @@
     <string name="lvl3text19">Собака</string>
     <string name="lvl3text20">Собака</string>
     <string name="lvl3text21">Тигр</string>
+
+    <string name="lvl4texts1">Яйцо</string>
+    <string name="lvl4texts2">Обоя</string>
+    <string name="lvl4texts3">Орех</string>
+    <string name="lvl4texts4">Обоя</string>
+    <string name="lvl4texts5">ВафельныйСтаканчик</string>
+    <string name="lvl4texts6">Обоя</string>
+    <string name="lvl4texts7">ВафельныйСтаканчик</string>
+    <string name="lvl4texts8">Обоя</string>
+    <string name="lvl4texts9">ВафельныйСтаканчик</string>
+    <string name="lvl4texts10">Обоя</string>
+    <string name="lvl4texts11">Печенье</string>
+    <string name="lvl4texts12">Обоя</string>
+    <string name="lvl4texts13">Печенье</string>
+    <string name="lvl4texts14">Обоя</string>
+    <string name="lvl4texts15">Печенье</string>
+    <string name="lvl4texts16">Обоя</string>
+    <string name="lvl4texts17">Жаркое</string>
+    <string name="lvl4texts18">Обоя</string>
+    <string name="lvl4texts19">Торт</string>
+    <string name="lvl4texts20">Обоя</string>
 </resources>

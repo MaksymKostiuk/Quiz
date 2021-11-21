@@ -8,4 +8,5 @@
     <string name="levelthree">Кто из животных больше показывает язык?</string>
     <string name="levelthreeEnd">Поздравляем, уровень пройден\n</string>
     <string name="levelfour">Выбери что нибудь сьедобное\n</string>
+    <string name="levelfourEnd">Поздравляем, уровень пройден\nКрокодилы глотают канми</string>
 </resources>

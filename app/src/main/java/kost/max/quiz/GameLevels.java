@@ -83,7 +83,7 @@ public class GameLevels extends AppCompatActivity {
         //Кнопка перехода на 3 уровень конец
 
         //Кнопка перехода на 4 уровень начало
-        TextView textView4 = (TextView)findViewById(R.id.textView3);
+        TextView textView4 = (TextView)findViewById(R.id.textView4);
         textView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

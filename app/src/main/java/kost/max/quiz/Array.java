@@ -109,4 +109,59 @@ public class Array {
 
     };
     //Массив для третьего уровня - конец
+
+    //Массив для четвертого уровня - начало
+    final int[] images4 = {
+            R.drawable.eat1,
+            R.drawable.neat1,
+            R.drawable.eat2,
+            R.drawable.neat2,
+            R.drawable.eat3,
+            R.drawable.neat3,
+            R.drawable.eat4,
+            R.drawable.neat4,
+            R.drawable.eat5,
+            R.drawable.neat5,
+            R.drawable.eat6,
+            R.drawable.neat6,
+            R.drawable.eat7,
+            R.drawable.neat7,
+            R.drawable.eat8,
+            R.drawable.neat8,
+            R.drawable.eat9,
+            R.drawable.neat9,
+            R.drawable.eat10,
+            R.drawable.neat10,
+    };
+
+    final int[] texts4 = {
+            R.string.lvl4texts1,
+            R.string.lvl4texts2,
+            R.string.lvl4texts3,
+            R.string.lvl4texts4,
+            R.string.lvl4texts5,
+            R.string.lvl4texts6,
+            R.string.lvl4texts7,
+            R.string.lvl4texts8,
+            R.string.lvl4texts9,
+            R.string.lvl4texts10,
+            R.string.lvl4texts11,
+            R.string.lvl4texts12,
+            R.string.lvl4texts13,
+            R.string.lvl4texts14,
+            R.string.lvl4texts15,
+            R.string.lvl4texts16,
+            R.string.lvl4texts17,
+            R.string.lvl4texts18,
+            R.string.lvl4texts19,
+            R.string.lvl4texts20,
+    };
+
+    final int[] strong = {
+            1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+    };
+
+    //Массив для четвертого уровня - конец
+
+
 }
